@@ -85,20 +85,20 @@ public class Fuchs extends Spieler {
             Point change = erzeugeNeuePosition();
             if (derJaeger.gibX() >= naechstePositionen[i - 1].x && naechstePositionen[i - 1].x - change.x > 0) {
                 naechstePositionen[i].x = naechstePositionen[i - 1].x - change.x;
-            } else if (derJaeger.gibX() >= naechstePositionen[i - 1].x && naechstePositionen[i - 1].x - change.x < 0) {
+            } else if (derJaeger.gibX() >= naechstePositionen[i - 1].x && naechstePositionen[i - 1].x - change.x <= 0) {
                 naechstePositionen[i].x = naechstePositionen[i - 1].x + change.x;
             } else if (derJaeger.gibX() < naechstePositionen[i - 1].x && naechstePositionen[i - 1].x + change.x < width) {
                 naechstePositionen[i].x = naechstePositionen[i - 1].x + change.x;
-            } else if (derJaeger.gibX() < naechstePositionen[i - 1].x && naechstePositionen[i - 1].x + change.x > width) {
+            } else if (derJaeger.gibX() < naechstePositionen[i - 1].x && naechstePositionen[i - 1].x + change.x >= width) {
                 naechstePositionen[i].x = naechstePositionen[i - 1].x - change.x;
             }
             if (derJaeger.gibY() >= naechstePositionen[i - 1].y && naechstePositionen[i - 1].y - change.y > 0) {
                 naechstePositionen[i].y = naechstePositionen[i - 1].y - change.y;
-            } else if (derJaeger.gibY() >= naechstePositionen[i - 1].y && naechstePositionen[i - 1].y - change.y < 0) {
+            } else if (derJaeger.gibY() >= naechstePositionen[i - 1].y && naechstePositionen[i - 1].y - change.y <= 0) {
                 naechstePositionen[i].y = naechstePositionen[i - 1].y + change.y;
             } else if (derJaeger.gibY() < naechstePositionen[i - 1].y && naechstePositionen[i - 1].y + change.y < height) {
                 naechstePositionen[i].y = naechstePositionen[i - 1].y + change.y;
-            } else if (derJaeger.gibY() < naechstePositionen[i - 1].y && naechstePositionen[i - 1].y + change.y > height) {
+            } else if (derJaeger.gibY() < naechstePositionen[i - 1].y && naechstePositionen[i - 1].y + change.y >= height) {
                 naechstePositionen[i].y = naechstePositionen[i - 1].y - change.y;
             }
         }
