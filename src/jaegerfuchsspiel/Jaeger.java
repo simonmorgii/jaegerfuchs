@@ -39,21 +39,21 @@ public class Jaeger extends Spieler {
         // Berechnung der X Veraenderung
         if (position.x <= derFuchs.gibX() && position.x + change.x < width - 100) {
             position.x += change.x;
-        } else if (position.x <= derFuchs.gibX() && position.x + change.x > width - 100) {
+        } else if (position.x <= derFuchs.gibX() && position.x + change.x >= width - 100) {
             position.x -= change.x;
         } else if (position.x > derFuchs.gibX() && position.x - change.x > 0) {
             position.x -= change.x;
-        } else if (position.x > derFuchs.gibX() && position.x - change.x < 0) {
+        } else if (position.x > derFuchs.gibX() && position.x - change.x <= 0) {
             position.x += change.x;
         }
         // Berechnung der Y Veraenderung
         if (position.y <= derFuchs.gibY() && position.y + change.y < height - 100) {
             position.y += change.y;
-        } else if (position.y <= derFuchs.gibY() && position.y + change.y > height - 100) {
+        } else if (position.y <= derFuchs.gibY() && position.y + change.y >= height - 100) {
             position.y -= change.y;
         } else if (position.y > derFuchs.gibY() && position.y - change.y > 0) {
             position.y -= change.y;
-        } else if (position.y > derFuchs.gibY() && position.y - change.y < 0) {
+        } else if (position.y > derFuchs.gibY() && position.y - change.y <= 0) {
             position.y += change.y;
         }
     }

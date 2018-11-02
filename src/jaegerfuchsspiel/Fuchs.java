@@ -41,7 +41,7 @@ public class Fuchs extends Spieler {
         // Berechnung x Veranderung
         if (naechstePositionen[3].x <= derJaeger.gibX() && naechstePositionen[3].x - change.x > 0) {
             p.x = naechstePositionen[3].x - change.x;
-        } else if (naechstePositionen[3].x <= derJaeger.gibX() && naechstePositionen[3].x - change.x < 0) {
+        } else if (naechstePositionen[3].x <= derJaeger.gibX() && naechstePositionen[3].x - change.x <= 0) {
             p.x = naechstePositionen[3].x + change.x;
         } else if (naechstePositionen[3].x > derJaeger.gibX() && naechstePositionen[3].x + change.x <= width - 100) {
             p.x = naechstePositionen[3].x + change.x;
@@ -51,7 +51,7 @@ public class Fuchs extends Spieler {
         // Berechnung y Veraenderung
         if (naechstePositionen[3].y <= derJaeger.gibY() && naechstePositionen[3].y - change.y > 0) {
             p.y = naechstePositionen[3].y - change.y;
-        } else if (naechstePositionen[3].y <= derJaeger.gibY() && naechstePositionen[3].y - change.y < 0) {
+        } else if (naechstePositionen[3].y <= derJaeger.gibY() && naechstePositionen[3].y - change.y <= 0) {
             p.y = naechstePositionen[3].y + change.y;
         } else if (naechstePositionen[3].y > derJaeger.gibY() && naechstePositionen[3].y + change.y <= height - 100) {
             p.y = naechstePositionen[3].y + change.y;
